@@ -1,0 +1,119 @@
+html,
+body {
+  height: 100%; /* sorgt dafür, dass die Seite die volle Höhe des Viewports einnimmt */
+  margin: 0; /* entfernt alle Standardmargen */
+}
+body {
+    transition: 0.3s;
+    display: flex; 
+    flex-direction: column;
+}
+
+main {
+  flex: 1; 
+}
+
+.topnav {
+    background-color: rgb(141,27,245);
+    overflow: hidden;
+}
+
+.navtitle {
+    text-align: center;
+    padding: 8px 16px;
+    color: white;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 18px;
+    float: left;  
+}
+
+.topnav a {
+    text-align: center;
+    padding: 14px 16px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', bold;
+    font-size: 17px;
+    float: left;  
+}
+
+.active:hover {
+    background-color: rgb(93, 23, 158);
+}
+
+/*Dark-LightSwitch*/
+#theme-toggle {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    float: right;  
+  }
+
+  .iconify {
+    background-image: url("img/brightness.png");
+  }
+  
+  /* Stil für den Darkmode */
+  body.dark-mode {
+    transition: 0.3s;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  /* Stil für das Lightmode-Icon im Darkmode */
+  body.dark-mode #theme-toggle .iconify:nth-child(1) {
+    display: none;
+  }
+  
+  /* Stil für das Darkmode-Icon im Darkmode */
+  body.dark-mode #theme-toggle .iconify:nth-child(2) {
+    display: block;
+  }
+  
+/* FOOOTER */
+footer {
+  background-color: rgb(141,27,245);
+  display: flex;
+  justify-content: center; /* zentriert den Inhalt horizontal */
+  align-items: center; /* zentriert den Inhalt vertikal unten */
+}
+
+#copyright {
+  color: rgb(255, 255, 255);
+  font-family: 'Courier New', Courier, monospace;
+  font-size:10px;
+}
+
+
+/*gridbox*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 50px auto;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.WikiItems {
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 290px;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.8;
+  background-image: linear-gradient(to right, #2c1d64, #150a4e, #22153f);
+  box-shadow: 5px 5px 5px rgb(106, 26, 172);
+  cursor: pointer;
+}
+.WikiItems h1 {
+  color: white;
+}
