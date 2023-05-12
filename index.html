@@ -24,7 +24,7 @@
             <img id="ldicon" src="img/brightness.png" alt="lightdark" width="14" height="14">
         </button>
     </div>
-    <script src="src/logic.js"></script>
+    <script src="src/lightdark.js"></script>
     <script>
         let backgroundsetting = localStorage.getItem("BgSetting")
         if (!backgroundsetting === null) {
@@ -33,15 +33,52 @@
             WindowMode(backgroundsetting)
         }
     </script>
-    <main>
-        <div class="flex-container">
-            <a class="WikiItems">
+    <main id="main">
+        <div id="WikiContainer" class="flex-container">
+            <a id="WikiItems">
                 <img src="img/hexchars.png" width="128" height="128"> </img>
                 <h1> HexChars </h1>
             </a>
           </div>
+          <div id="Selector">
+                <script>
+                    
+                </script>
+          </div>
+          <div id="main_s"></div>
+          <script src="src/logic.js"></script>
+          <!--
+            <textarea id="markdown-text" rows="10" cols="50"># Überschrift 1
+            ## Überschrift 2
+            Dies ist ein **fetter Text** und dies ist *kursiver Text*.
+                </textarea>
+
+            <script>
+            function convert() {
+                // Markdown-Text auslesen
+                const markdown = document.getElementById("markdown-text").value;
+
+                // Überschriften umsetzen
+                const headings = markdown.replace(/^(#+)\s*(.*?)\s*#*$/gm, (match, p1, p2) => {
+                const level = p1.length;
+                return `<h${level}>${p2}</h${level}>`;
+                });
+
+                // Fettdruck umsetzen
+                const bold = headings.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+                // Kursivschrift umsetzen
+                const italic = bold.replace(/\*(.*?)\*/g, "<em>$1</em>");
+
+                // Ergebnis anzeigen
+                document.getElementById("output").innerHTML = italic;
+            }
+            </script>
+
+          -->
     </main>
 </body>
+
 <footer>
     <p id="copyright"> ©Hexagon Cryptics 2023 </p>
 </footer>
