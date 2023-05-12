@@ -5,7 +5,7 @@ function convertMarkdownToHtml(text) {
   const headings = text.replace(/^(#+)\s*(.*?)\s*#*$/gm, (match, p1, p2) => {
     const level = p1.length;
     if (level === 1) {
-      return `<h${level} id='wiki_titles1'>${p2}</h${level}> <hr id="titlelined">`;
+      return `<h${level} id='wiki_titles1'>${p2}</h${level}> <hr id='fd' width='100%' size='4.5' color='cornflowerblue' noshade>`;
     } else if ( level == 2) {
       return `<h${level} id='wiki_titles2'>${p2}</h${level}>`;
     };
@@ -37,6 +37,8 @@ function InitDocsPage(page) {
     const wikiContainer = document.getElementById("WikiContainer");
     const parent = document.querySelector('#main_s');
 
+    document.getElementById('sidenav').style.display = "list-item"
+3
     if (wikiContainer !== null) {
       wikiContainer.style.display = "none";
       // Textbereich erstellen
@@ -48,7 +50,11 @@ function InitDocsPage(page) {
       console.log(parent)
     }
 
-    ReadPage('hexchars', 'home.php' )
+
+    //echo "<a href='#'>About</a>";
+
+
+    ReadPage('hexchars', 'home.md' )
 }
 WikiItem.addEventListener('click', () => {
   InitDocsPage('hexchars')

@@ -11,12 +11,16 @@ body {
 
 main {
   flex: 1; 
-}
-
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+} 
 
 .topnav {
     background-color: rgb(141,27,245);
     overflow: hidden;
+    width: 100%;
+    position: fixed;
 }
 
 .navtitle {
@@ -117,4 +121,36 @@ footer {
 }
 #WikiItems h1 {
   color: white;
+}
+
+
+
+
+
+
+
+
+
+.sidenav {
+  display: none;
+  height: 95%;
+  width: 200px;
+  position: absolute;
+  top: 3.2%;
+  left: 0;
+  background-color: rgb(141,27,245);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
 }
